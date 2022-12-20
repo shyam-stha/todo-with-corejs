@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "popings", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cdn.pixabay.com/photo/2019/02/25/14/56/wave-4019797_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    flex-direction: column;
+
+    .navbar {
+        width: 100vw;
+        height: 7vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px 30px;
+        background-color: rgba(62, 18, 224, 0.426);
+        align-items: center;
+        color: rgba(255, 255, 255, 0.919);
+    }
+
+    .container {
+        min-width: 30vw;
+        width: 40vw;
+
+        #todo__heading {
+            text-align: center;
+            margin-bottom: 40px;
+            color: rgb(53, 13, 92);
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+
+            .inputs {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            input[type="text"],
+            input[type="button"],
+            .display-console {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input[type="button"] {
+                background-color: rgba(91, 37, 216, 0.689);
+                color: white;
+                font-weight: bolder;
+            }
+
+            input[type="button"]:hover {
+                cursor: pointer;
+                background-color: rgba(91, 31, 231, 0.689);
+                color: rgba(0, 0, 0, 0.682)
+            }
+
+            input[type="button"]:active {
+                background-color: #510fe0;
+                box-shadow: 0 2px #666;
+                transform: translateY(5px);
+            }
+
+            input[type="text"] {
+                background-color: white;
+                width: 100%;
+                outline: none;
+            }
+
+            input[type="text"]:focus {
+                color: white;
+                outline: 1px solid black;
+                background-color: transparent;
+            }
+
+            .display {
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                flex-direction: column;
+                gap: 5px;
+                width: 100%;
+
+                .todo-list {
+                    display: flex;
+                    gap: 5px;
+
+                    .todo-list__btn--group {
+                        display: flex;
+                        gap: 5px;
+
+                        .todo-list__btn,
+                        .todo-list__input {
+                            background-color: rgba(255, 255, 255, 0.549);
+                            padding: 10px 20px;
+                        }
+
+                        .img {
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+
+                    .todo-list__input {
+                        width: 100%;
+                        background-color: transparent;
+                        color: rgb(253, 253, 253);
+                        font: 1em sans-serif;
+                        letter-spacing: 1.5px;
+                        padding-left: 10px;
+                    }
+
+                    .todo-list__input:focus {
+                        outline: none;
+                        color: rgba(37, 26, 13, 0.603);
+                        background-color: rgba(255, 255, 255, 0.405);
+                        border: none;
+                        border-radius: 5px;
+                    }
+                }
+
+            }
+
+            .display-console {
+                margin-top: 5vh;
+                background-color: rgba(11, 11, 193, 0.861);
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    button {
+        border-radius: 5px;
+        outline: none;
+        border: none;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: white;
+        background-color: rgba(68, 12, 221, 0.666);
+    }
+
+    button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 2px #666;
+        transform: translateY(5px);
+    }
+
+}
