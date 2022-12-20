@@ -15,16 +15,34 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
+  flex-direction: column;
+}
+body .navbar {
+  width: 100vw;
+  height: 7vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 30px;
+  background-color: rgba(62, 18, 224, 0.426);
+  align-items: center;
+  color: rgba(255, 255, 255, 0.919);
+}
+body .container {
+  min-width: 30vw;
+  width: 40vw;
 }
 body .container #todo__heading {
   text-align: center;
   margin-bottom: 40px;
   color: rgb(53, 13, 92);
   font-weight: bolder;
+  letter-spacing: 2px;
 }
 body .container .main {
   display: flex;
   flex-direction: column;
+  width: auto;
 }
 body .container .main .inputs {
   display: flex;
@@ -55,7 +73,7 @@ body .container .main input[type=button]:active {
 }
 body .container .main input[type=text] {
   background-color: white;
-  width: 50vw;
+  width: 100%;
   outline: none;
 }
 body .container .main input[type=text]:focus {
@@ -67,6 +85,41 @@ body .container .main .display {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+body .container .main .display .todo-list {
+  display: flex;
+  gap: 5px;
+}
+body .container .main .display .todo-list .todo-list__btn--group {
+  display: flex;
+  gap: 5px;
+}
+body .container .main .display .todo-list .todo-list__btn--group .todo-list__btn,
+body .container .main .display .todo-list .todo-list__btn--group .todo-list__input {
+  background-color: rgba(255, 255, 255, 0.549);
+  padding: 10px 20px;
+}
+body .container .main .display .todo-list .todo-list__btn--group .img {
+  height: 20px;
+  width: 20px;
+}
+body .container .main .display .todo-list .todo-list__input {
+  width: 100%;
+  background-color: transparent;
+  color: rgb(253, 253, 253);
+  font: 1em sans-serif;
+  letter-spacing: 1.5px;
+  padding-left: 10px;
+}
+body .container .main .display .todo-list .todo-list__input:focus {
+  outline: none;
+  color: rgba(37, 26, 13, 0.603);
+  background-color: rgba(255, 255, 255, 0.405);
+  border: none;
+  border-radius: 5px;
 }
 body .container .main .display-console {
   margin-top: 5vh;
@@ -82,10 +135,10 @@ body button {
 body button:hover {
   cursor: pointer;
   color: white;
-  background-color: rgb(68, 12, 221);
+  background-color: rgba(68, 12, 221, 0.666);
 }
 body button:active {
   background-color: #3e8e41;
   box-shadow: 0 2px #666;
-  transform: translateY(4px);
+  transform: translateY(5px);
 }/*# sourceMappingURL=todo.css.map */
