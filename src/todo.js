@@ -20,15 +20,29 @@ addBtn.addEventListener("click", (e) => {
   }
 });
 
+consoleDisplay.addEventListener("click", (e) => {
+  console.log("Final Todo List", task);
+});
 
-consoleDisplay.addEventListener("click", (e)=>{
-    console.log("Final Todo List", task)
-})
-
-
-const displayTodoList = ()=>{
-    task.forEach((val)=>{
-        display.innerHTML +=`
-        `
-    })
-}
+const displayTodoList = () => {
+  task.forEach((val) => {
+    display.innerHTML += `
+            <div class="todo-list">
+                <input type="text" class="todo-list__input" id="todo__list--edit-input" ${val} disabled/>
+                    <div class="todo-list__btn">
+                       <button class="todo-list__btn--edit">
+                            Edit
+                        </button>
+                        <button class="todo-list__btn--delete">
+                             Delete
+                        </button>
+                        <button class="todo-list__btn--save" hidden>
+                             Save
+                        </button>
+                    </div>
+            </div>
+        `;
+        userInputs.value = "";
+  });
+  getTodoList();
+};
