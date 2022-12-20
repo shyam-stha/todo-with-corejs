@@ -7,6 +7,10 @@ const consoleDisplay = document.querySelector(".display-console");
 var userInputs;
 var todolists;
 
+window.addEventListener("DOMContentLoaded", ()=>{
+    alert("Welcome to Taskify, Manage Your Tasks with us")
+})
+
 addBtn.addEventListener("click", (e) => {
   userInputs = document.getElementById("input");
   let input = userInputs.value;
@@ -27,16 +31,16 @@ const displayTodoList = () => {
   task.forEach((val) => {
     display.innerHTML += `
             <div class='todo-list'>
-                <input class="todo-list__input" id="todo__list--edit-input" value =${val} disabled/>
-                    <div class="todo-list__btn">
-                       <button class="todo-list__btn--edit">
-                            Edit
-                        </button>
-                        <button class="todo-list__btn--delete">
-                             Delete
-                        </button>
-                        <button class="todo-list__btn--save" hidden>
-                             Save
+                <input class='todo-list__input' id='todo__list--edit-input' value ='${val}' disabled/>
+                    <div class='todo-list__btn--group'>
+                       <button class='todo-list__btn todo-list__btn--edit'>
+                            <img src='https://cdn-icons-png.flaticon.com/512/9191/9191381.png' alt='Edit' class='img'/>
+                            </button>
+                            <button class='todo-list__btn todo-list__btn--delete'>
+                            <img src='https://cdn-icons-png.flaticon.com/512/6861/6861362.png' alt='Delete' class='img'/>
+                            </button>
+                            <button class='todo-list__btn todo-list__btn--save' hidden>
+                            <img src='https://img.icons8.com/3d-fluency/2x/save.png' alt='Save' class='img'/>
                         </button>
                     </div>
             </div>
